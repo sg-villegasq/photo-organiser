@@ -1,6 +1,9 @@
 from tkinter import *
 from tkinter import ttk
 
+from gallery import Gallery
+from options import Options
+
 
 class PhotoOrganiser(object):
     def __init__(self, root: Tk) -> None:
@@ -11,4 +14,6 @@ class PhotoOrganiser(object):
         root.columnconfigure(0, weight=1)
         root.rowconfigure(0, weight=1)
 
-        ttk.Button(mainframe, text="Test button").grid(column=1, row=2, sticky=E)
+        Gallery(mainframe)
+
+        Options(mainframe, 7)

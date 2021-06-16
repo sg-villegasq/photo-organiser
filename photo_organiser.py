@@ -8,7 +8,6 @@ from sidebar import Sidebar
 
 class PhotoOrganiser(tk.Tk):
     def __init__(self, root: tk.Tk) -> None:
-        super().__init__()
         self.root = root
         root.title("Photo Organiser")
 

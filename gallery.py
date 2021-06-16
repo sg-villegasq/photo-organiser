@@ -2,8 +2,11 @@ import tkinter as tk
 from tkinter import ttk
 
 
-class Gallery(object):
-    def __init__(self, parent):
+class Gallery(ttk.Frame):
+    def __init__(self, window, parent):
+        super().__init__()
+        self.window = window
+        self.parent = parent
 
         mainframe = ttk.Frame(parent, padding="3 3 12 12")
         mainframe.grid(column=1, row=2)

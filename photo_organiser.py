@@ -6,8 +6,10 @@ from options import Options
 from sidebar import Sidebar
 
 
-class PhotoOrganiser(object):
+class PhotoOrganiser(tk.Tk):
     def __init__(self, root: tk.Tk) -> None:
+        super().__init__()
+        self.root = root
         root.title("Photo Organiser")
 
         mainframe = ttk.Frame(root, padding="3 3 12 12")
@@ -17,8 +19,8 @@ class PhotoOrganiser(object):
 
         ttk.Label(mainframe, text='<title>').grid(column=1, row=1)
 
-        Gallery(mainframe)
+        Gallery(root, mainframe)
 
-        op = Options(mainframe, 7)
+        op = Options(root, mainframe, 7)
 
-        Sidebar(mainframe, op)
+        Sidebar(root, mainframe, op)

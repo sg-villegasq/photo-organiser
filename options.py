@@ -4,11 +4,10 @@ from collections import namedtuple
 import math
 
 
-class Options(object):
-
-    n_buttons = 0
-
-    def __init__(self, parent, n):
+class Options(ttk.Frame):
+    def __init__(self, window, parent, n):
+        self.window = window
+        self.parent = parent
         self.n_buttons = n
 
         mainframe = ttk.Frame(parent, padding="3 3 12 12")

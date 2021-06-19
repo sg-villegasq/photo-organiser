@@ -32,6 +32,3 @@ class Options(ttk.Frame):
         ButtonLocation = namedtuple('button', ['row', 'column'])
         last_button = ButtonLocation(
             math.ceil(self.n_buttons / 2), self.n_buttons % 2)
-
-        print(
-            f'Last button at row: {last_button.row} and column: {last_button.column}')
